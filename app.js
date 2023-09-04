@@ -1,10 +1,11 @@
+require('dotenv').config();
 const express = require("express");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const _ = require("lodash");
 //const date = require(__dirname + "/date.js");
 
-mongoose.connect("mongodb+srv://alimoidrizvi:lT6pbC2HtwXMUwhT@cluster0.hf4xflj.mongodb.net/toDoListDB", {
+mongoose.connect(process.env.MONGO_URL, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
